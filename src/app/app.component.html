@@ -1,0 +1,41 @@
+<div class="example-header">
+  <mat-form-field>
+    <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Filter">
+  </mat-form-field>
+</div>
+
+<div class="example-container mat-elevation-z8">
+
+  <mat-table [dataSource]="dataSource" matSort>
+
+    <!-- ID Column -->
+    <ng-container matColumnDef="employeeId">
+      <mat-header-cell *matHeaderCellDef mat-sort-header> employeeId </mat-header-cell>
+      <mat-cell *matCellDef="let row"> {{row.employeeId}} </mat-cell>
+    </ng-container>
+
+    <!-- Progress Column -->
+    <ng-container matColumnDef="associateName">
+      <mat-header-cell *matHeaderCellDef mat-sort-header> associateName </mat-header-cell>
+      <mat-cell *matCellDef="let row"> {{row.associateName}} </mat-cell>
+    </ng-container>
+
+    <!-- Name Column -->
+    <ng-container matColumnDef="type">
+      <mat-header-cell *matHeaderCellDef mat-sort-header> type </mat-header-cell>
+      <mat-cell *matCellDef="let row"> {{row.type}} </mat-cell>
+    </ng-container>
+
+    <!-- Color Column -->
+    <ng-container matColumnDef="location_type">
+      <mat-header-cell *matHeaderCellDef mat-sort-header> location_type </mat-header-cell>
+      <mat-cell *matCellDef="let row"> {{row.location_type}} </mat-cell>
+    </ng-container>
+
+    <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+    <mat-row *matRowDef="let row; columns: displayedColumns;">
+    </mat-row>
+  </mat-table>
+
+  <mat-paginator [pageSizeOptions]="[5, 10, 25, 100]"></mat-paginator>
+</div>
