@@ -17,7 +17,7 @@ export class ReportService{
 
 	getCurrentReport():Promise<Report[]>{
 		return this._http
-		.get(Constants.base_url+'employee/listOfEmployees' )
+		.get(Constants.base_url+'reports/reports/all' )
 		.toPromise()
 		.then((res:Response)=>res.json())
 		.catch(error=>{
