@@ -3,19 +3,19 @@ import { Http, Response, Headers, RequestOptions, URLSearchParams } from "@angul
 import 'rxjs/Rx';
 import { Observable }     from 'rxjs/Observable';
 import { Constants } from '../constants';
-import { ReportEntity } from './ReportEntity';
+import { Report } from './report';
 
 
 
 
 @Injectable()
-export class ReportEntityService{
+export class ReportService{
 
 	constructor(private _http:Http){
 
 	}
 
-	getCurrentReport():Promise<ReportEntity[]>{
+	getCurrentReport():Promise<Report[]>{
 		return this._http
 		.get(Constants.base_url+'employee/listOfEmployees' )
 		.toPromise()

@@ -1,28 +1,30 @@
 import { Component,ViewChild } from '@angular/core';
 
 import {MatPaginator, MatSort, MatTableDataSource} from '@angular/material';
-import { ReportEntityService } from "./ReportEntity.service";
-import { ReportEntity} from "./ReportEntity";
+import { ReportService } from "./report.service";
+import { Report} from "./report";
+import {MatDialog} from '@angular/material';
+import {UpdateReportDialog} from './../Dialog/update-report-dialog.component';
 
 @Component({
-  selector: 'Report-root',
-  templateUrl: './ReportEntity.component.html'
+  selector: 'report-root',
+  templateUrl: './report.component.html'
  })
 
 
-export class ReportEntityComponent {
-  displayedColumns = ['save','edit','employeeId','associateId','associateName','associateCity','locationType','customerId'
+export class ReportComponent {
+  displayedColumns = ['edit','employeeId','associateId','associateName','associateCity','locationType','customerId'
   ,'customerName','projectId','projectName','billableType','associateGrade','allocStartDate','project_Billability',
   'forecastPeriodFrom','forecastPeriodTo','forecastedOn','lastUpdatedUser','lastUpdatedTime','rate','portfolio',
   'poc','hours','revenue'];
-  dataSource: MatTableDataSource<ReportEntity>;
+  dataSource: MatTableDataSource<Report>;
 
   @ViewChild(MatPaginator) paginator: MatPaginator;
   @ViewChild(MatSort) sort: MatSort;
 
-  report: ReportEntity[] = [];
+  reports: Report[] = [];
 
-  constructor(private _reportService: ReportEntityService) {
+  constructor(private _reportService: ReportService,public dialog: MatDialog) {
 
     this._reportService
 			.getCurrentReport()
@@ -49,4 +51,22 @@ export class ReportEntityComponent {
     filterValue = filterValue.toLowerCase(); // Datasource defaults to lowercase matches
     this.dataSource.filter = filterValue;
   }
+
+  editReport(reportE: Report){
+    
+    console.log(reportE);
+    
+    
+    const dialogRef = this.dialog.open(UpdateReportDialog, {
+      data: {
+        report: reportE
+      }
+    });
+
+    dialogRef.afterClosed().subscribe(result => {
+      console.log(`Dialog result: ${result}`);
+    });
+    
+  }
+
 }

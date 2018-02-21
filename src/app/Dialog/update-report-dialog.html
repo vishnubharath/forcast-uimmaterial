@@ -1,0 +1,27 @@
+<h2 class="mat-dialog-title" mat-dialog-title="" id="mat-dialog-title-5">Edit Report '{{report.reportId}}'</h2>
+
+<mat-dialog-content class="mat-dialog-content">
+    <form class="example-form">
+        <mat-form-field class="update-full-width">
+            <input matInput [ngModel]="report.associateName" [ngModelOptions]="{standalone: true}" placeholder="Employee Name">
+        </mat-form-field>
+
+        <mat-form-field class="update-full-width">
+            <input matInput [ngModel]="report.associateId" [ngModelOptions]="{standalone: true}" placeholder="Employee Id" >
+        </mat-form-field>
+
+    </form>
+
+</mat-dialog-content>
+<mat-dialog-actions class="mat-dialog-actions">
+    <button mat-button="" mat-dialog-close="" type="button" class="mat-button" aria-label="Close dialog">
+        <span class="mat-button-wrapper">Cancel</span>
+        <div class="mat-button-ripple mat-ripple" matripple=""></div>
+        <div class="mat-button-focus-overlay"></div>
+    </button>
+    <button cdkfocusinitial="" mat-button="" type="button" class="mat-button" aria-label="Close dialog">
+        <span class="mat-button-wrapper">Save</span>
+        <div class="mat-button-ripple mat-ripple" matripple=""></div>
+        <div class="mat-button-focus-overlay"></div>
+    </button>
+</mat-dialog-actions>

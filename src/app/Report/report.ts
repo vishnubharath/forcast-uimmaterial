@@ -1,4 +1,4 @@
-export class ReportEntity{
+export class Report{
 
 reportId: number;
 

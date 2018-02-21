@@ -1,8 +1,8 @@
 import { Component,ViewChild } from '@angular/core';
 
 import {MatPaginator, MatSort, MatTableDataSource} from '@angular/material';
-import { ReportService } from "./report.service";
-import { Report} from "./report";
+import { ReportService } from "./Report/report.service";
+import { Report} from './Report/report';
 
 @Component({
   selector: 'app-root',
@@ -20,27 +20,5 @@ export class AppComponent {
 
   report: Report[] = [];
 
-  constructor(private _reportService: ReportService) {
-
-    this._reportService
-			.getCurrentReport()
-			.then(
-			report=>{
-        
-        console.log(report);
-
-        // Assign the data to the data source for the table to render
-        this.dataSource = new MatTableDataSource(report);
-        this.dataSource.paginator = this.paginator;
-        this.dataSource.sort = this.sort;
-      },
-				error =>  console.log("Error : " + error)
-			);   
-  }
-
-  applyFilter(filterValue: string) {
-    filterValue = filterValue.trim(); // Remove whitespace
-    filterValue = filterValue.toLowerCase(); // Datasource defaults to lowercase matches
-    this.dataSource.filter = filterValue;
-  }
+  constructor() {}
 }
