@@ -11,9 +11,10 @@ import { ReportEntity} from "./ReportEntity";
 
 
 export class ReportEntityComponent {
-  displayedColumns = ['save','edit','employeeId','associateId','associateName','associateCity','locationType','customerID'
-  ,'customerName','projectId','projectName','billableType','associateGrade','allocStartDate','Project_Billability',
-  'Forecast_Period_From','Forecast_Period_To','Forecasted_On','Last_Updated_User','Last_Updated_Time','Portfolio','POC','Hours','Rate','Revenue'];
+  displayedColumns = ['save','edit','employeeId','associateId','associateName','associateCity','locationType','customerId'
+  ,'customerName','projectId','projectName','billableType','associateGrade','allocStartDate','project_Billability',
+  'forecastPeriodFrom','forecastPeriodTo','forecastedOn','lastUpdatedUser','lastUpdatedTime','rate','portfolio',
+  'poc','hours','revenue'];
   dataSource: MatTableDataSource<ReportEntity>;
 
   @ViewChild(MatPaginator) paginator: MatPaginator;
@@ -26,12 +27,16 @@ export class ReportEntityComponent {
     this._reportService
 			.getCurrentReport()
 			.then(
-			report=>{
+			reports=>{
         
-        console.log(report);
+        console.log(reports);
+
+        reports.forEach(rp => {
+          console.log(rp.reportId);
+        });
 
         // Assign the data to the data source for the table to render
-        this.dataSource = new MatTableDataSource(report);
+        this.dataSource = new MatTableDataSource(reports);
         this.dataSource.paginator = this.paginator;
         this.dataSource.sort = this.sort;
       },

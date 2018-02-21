@@ -44,7 +44,7 @@
         <mat-header-cell *matHeaderCellDef mat-sort-header> locationType </mat-header-cell>
         <mat-cell *matCellDef="let row"> {{row.locationType}} </mat-cell>
       </ng-container>
-      <ng-container matColumnDef="customerID">
+      <ng-container matColumnDef="customerId">
         <mat-header-cell *matHeaderCellDef mat-sort-header> customerID </mat-header-cell>
         <mat-cell *matCellDef="let row"> {{row.customerID}} </mat-cell>
       </ng-container>
@@ -70,49 +70,49 @@
         <mat-header-cell *matHeaderCellDef mat-sort-header> allocStartDate </mat-header-cell>
         <mat-cell *matCellDef="let row"> {{row.allocStartDate}} </mat-cell>
       </ng-container>
-      <ng-container matColumnDef="Project_Billability">
-        <mat-header-cell *matHeaderCellDef mat-sort-header> Project_Billability </mat-header-cell>
-        <mat-cell *matCellDef="let row"> {{row.Project_Billability}} </mat-cell>
+      <ng-container matColumnDef="project_Billability">
+        <mat-header-cell *matHeaderCellDef mat-sort-header> Project Billability </mat-header-cell>
+        <mat-cell *matCellDef="let row"> {{row.project_Billability}} </mat-cell>
       </ng-container>
-      <ng-container matColumnDef="Forecast_Period_From">
+      <ng-container matColumnDef="forecastPeriodFrom">
         <mat-header-cell *matHeaderCellDef mat-sort-header> Forecast_Period_From </mat-header-cell>
         <mat-cell *matCellDef="let row"> {{row.Forecast_Period_From}} </mat-cell>
       </ng-container>
-      <ng-container matColumnDef="Forecast_Period_To">
+      <ng-container matColumnDef="forecastPeriodTo">
         <mat-header-cell *matHeaderCellDef mat-sort-header> Forecast_Period_To </mat-header-cell>
-        <mat-cell *matCellDef="let row"> {{row.Forecast_Period_To}} </mat-cell>
+        <mat-cell *matCellDef="let row"> {{row.forecastPeriodTo}} </mat-cell>
       </ng-container>
-      <ng-container matColumnDef="Forecasted_On">
+      <ng-container matColumnDef="forecastedOn">
         <mat-header-cell *matHeaderCellDef mat-sort-header> Forecasted_On </mat-header-cell>
-        <mat-cell *matCellDef="let row"> {{row.Forecasted_On}} </mat-cell>
+        <mat-cell *matCellDef="let row"> {{row.forecastedOn}} </mat-cell>
       </ng-container>
-      <ng-container matColumnDef="Last_Updated_User">
-        <mat-header-cell *matHeaderCellDef mat-sort-header> Last_Updated_User </mat-header-cell>
-        <mat-cell *matCellDef="let row"> {{row.Last_Updated_User}} </mat-cell>
+      <ng-container matColumnDef="lastUpdatedUser">
+        <mat-header-cell *matHeaderCellDef mat-sort-header> Last Updated User </mat-header-cell>
+        <mat-cell *matCellDef="let row"> {{row.lastUpdatedUser}} </mat-cell>
       </ng-container>
-      <ng-container matColumnDef="Last_Updated_Time">
-        <mat-header-cell *matHeaderCellDef mat-sort-header> Last_Updated_Time </mat-header-cell>
-        <mat-cell *matCellDef="let row"> {{row.Last_Updated_Time}} </mat-cell>
+      <ng-container matColumnDef="lastUpdatedTime">
+        <mat-header-cell *matHeaderCellDef mat-sort-header> Last Updated Time </mat-header-cell>
+        <mat-cell *matCellDef="let row"> {{row.lastUpdatedTime}} </mat-cell>
       </ng-container>
-      <ng-container matColumnDef="Rate">
+      <ng-container matColumnDef="rate">
         <mat-header-cell *matHeaderCellDef mat-sort-header> Rate </mat-header-cell>
-        <mat-cell *matCellDef="let row"> {{row.Rate}} </mat-cell>
+        <mat-cell *matCellDef="let row"> {{row.rate}} </mat-cell>
       </ng-container>
-      <ng-container matColumnDef="Portfolio">
+      <ng-container matColumnDef="portfolio">
         <mat-header-cell *matHeaderCellDef mat-sort-header> Portfolio </mat-header-cell>
-        <mat-cell *matCellDef="let row"> {{row.Portfolio}} </mat-cell>
+        <mat-cell *matCellDef="let row"> {{row.portfolio}} </mat-cell>
       </ng-container>
-     <ng-container matColumnDef="POC">
+     <ng-container matColumnDef="poc">
     <mat-header-cell *matHeaderCellDef mat-sort-header> POC </mat-header-cell>
-    <mat-cell *matCellDef="let row"> {{row.POC}} </mat-cell>
+    <mat-cell *matCellDef="let row"> {{row.poc}} </mat-cell>
   </ng-container>
-  <ng-container matColumnDef="Hours">
+  <ng-container matColumnDef="hours">
     <mat-header-cell *matHeaderCellDef mat-sort-header> Hours </mat-header-cell>
-    <mat-cell *matCellDef="let row"> {{row.Hours}} </mat-cell>
+    <mat-cell *matCellDef="let row"> {{row.hours}} </mat-cell>
   </ng-container>
-      <ng-container matColumnDef="Revenue">
+      <ng-container matColumnDef="revenue">
         <mat-header-cell *matHeaderCellDef mat-sort-header> Revenue </mat-header-cell>
-        <mat-cell *matCellDef="let row"> {{row.Revenue}} </mat-cell>
+        <mat-cell *matCellDef="let row"> {{row.revenue}} </mat-cell>
       </ng-container>
       <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
       <mat-row *matRowDef="let row; columns: displayedColumns;">

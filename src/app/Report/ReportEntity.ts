@@ -1,5 +1,7 @@
 export class ReportEntity{
 
+reportId: number;
+
 employeeId:number;
 
 associateId:number;
@@ -10,7 +12,7 @@ associateCity:string;
 
 locationType:string;
 
-customerID:number;
+customerId:number;
 
 customerName:string;
 
@@ -24,28 +26,28 @@ associateGrade:string;
 
 allocStartDate:number;
 
-Project_Billability:string;
+project_Billability:string;
 
-Forecast_Period_From:number;
+forecastPeriodFrom:number;
 
-Forecast_Period_To:number;
+forecastPeriodTo:number;
 
-Forecasted_On:number;
+forecastedOn:number;
 
-Last_Updated_User:string;
+lastUpdatedUser:string;
 
-Last_Updated_Time:number;
+lastUpdatedTime:number;
 
-Portfolio:string;
+portfolio:string;
 
-POC:string;
+poc:string;
 
-Adjustment:number;
+adjustment:number;
 
-Hours:number;
+hours:number;
 
-Rate:number;
+rate:number;
 
-Revenue:string;
+revenue:string;
 
 }
