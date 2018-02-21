@@ -9,8 +9,10 @@ import { Report} from "./report";
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
+
+
 export class AppComponent {
-  displayedColumns = ['employeeId', 'associateName', 'type', 'location_type'];
+  displayedColumns = ['save','edit','employeeId','projectId','locationId','esaProjectName','associateName','location','lob','type','leave_days','totalRate','month','year','totalHours','allocation_start_date','allocation_end_date','vacationNonBillableDays','vacationNonBillableHours','rate','location_type'];
   dataSource: MatTableDataSource<Report>;
 
   @ViewChild(MatPaginator) paginator: MatPaginator;

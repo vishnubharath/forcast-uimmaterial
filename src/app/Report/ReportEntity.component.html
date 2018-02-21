@@ -1,0 +1,124 @@
+<div class="example-header">
+    <mat-form-field>
+      <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Filter">
+    </mat-form-field>
+  </div>
+  
+  <div class="example-container mat-elevation-z8" style="overflow: visible;">
+  
+    <mat-table [dataSource]="dataSource"  matSort>
+  
+        
+      <!-- ID Column -->
+    
+      <ng-container matColumnDef="save">
+        <mat-header-cell *matHeaderCellDef> Save </mat-header-cell>
+        <mat-cell *matCellDef="let row"> <input type="button" value="Save" onclick>  </mat-cell>
+      </ng-container>
+      
+      <ng-container matColumnDef="edit">
+        <mat-header-cell *matHeaderCellDef> Edit </mat-header-cell>
+        <mat-cell *matCellDef="let row"> <input type="button" value="Edit" onclick>  </mat-cell>
+      </ng-container>
+      <ng-container matColumnDef="employeeId">
+        <mat-header-cell *matHeaderCellDef mat-sort-header > employeeId </mat-header-cell>
+        <mat-cell *matCellDef="let row" > {{row.employeeId}} </mat-cell>
+      </ng-container>
+      <ng-container matColumnDef="projectId">
+        <mat-header-cell *matHeaderCellDef mat-sort-header> projectId </mat-header-cell>
+        <mat-cell *matCellDef="let row"> {{row.projectId}} </mat-cell>
+      </ng-container>
+      <ng-container matColumnDef="associateId">
+        <mat-header-cell *matHeaderCellDef mat-sort-header> associateId </mat-header-cell>
+        <mat-cell *matCellDef="let row"> {{row.associateId}} </mat-cell>
+      </ng-container>
+      <ng-container matColumnDef="associateName">
+        <mat-header-cell *matHeaderCellDef mat-sort-header> associateName </mat-header-cell>
+        <mat-cell *matCellDef="let row"> {{row.associateName}} </mat-cell>
+      </ng-container>
+      <ng-container matColumnDef="associateCity">
+        <mat-header-cell *matHeaderCellDef mat-sort-header> associateCity </mat-header-cell>
+        <mat-cell *matCellDef="let row"> {{row.associateCity}} </mat-cell>
+      </ng-container>
+      <ng-container matColumnDef="locationType">
+        <mat-header-cell *matHeaderCellDef mat-sort-header> locationType </mat-header-cell>
+        <mat-cell *matCellDef="let row"> {{row.locationType}} </mat-cell>
+      </ng-container>
+      <ng-container matColumnDef="customerID">
+        <mat-header-cell *matHeaderCellDef mat-sort-header> customerID </mat-header-cell>
+        <mat-cell *matCellDef="let row"> {{row.customerID}} </mat-cell>
+      </ng-container>
+      <ng-container matColumnDef="customerName">
+        <mat-header-cell *matHeaderCellDef mat-sort-header> customerName </mat-header-cell>
+        <mat-cell *matCellDef="let row"> {{row.customerName}} </mat-cell>
+      </ng-container>
+      <ng-container matColumnDef="projectName">
+        <mat-header-cell *matHeaderCellDef mat-sort-header> projectName </mat-header-cell>
+        <mat-cell *matCellDef="let row"> {{row.projectName}} </mat-cell>
+      </ng-container>
+      <ng-container matColumnDef="billableType">
+        <mat-header-cell *matHeaderCellDef mat-sort-header> billableType </mat-header-cell>
+        <mat-cell *matCellDef="let row"> {{row.billableType}} </mat-cell>
+      </ng-container>
+      <ng-container matColumnDef="associateGrade">
+        <mat-header-cell *matHeaderCellDef mat-sort-header> associateGrade </mat-header-cell>
+        <mat-cell *matCellDef="let row"> {{row.associateGrade}} </mat-cell>
+      </ng-container>
+
+        
+      <ng-container matColumnDef="allocStartDate">
+        <mat-header-cell *matHeaderCellDef mat-sort-header> allocStartDate </mat-header-cell>
+        <mat-cell *matCellDef="let row"> {{row.allocStartDate}} </mat-cell>
+      </ng-container>
+      <ng-container matColumnDef="Project_Billability">
+        <mat-header-cell *matHeaderCellDef mat-sort-header> Project_Billability </mat-header-cell>
+        <mat-cell *matCellDef="let row"> {{row.Project_Billability}} </mat-cell>
+      </ng-container>
+      <ng-container matColumnDef="Forecast_Period_From">
+        <mat-header-cell *matHeaderCellDef mat-sort-header> Forecast_Period_From </mat-header-cell>
+        <mat-cell *matCellDef="let row"> {{row.Forecast_Period_From}} </mat-cell>
+      </ng-container>
+      <ng-container matColumnDef="Forecast_Period_To">
+        <mat-header-cell *matHeaderCellDef mat-sort-header> Forecast_Period_To </mat-header-cell>
+        <mat-cell *matCellDef="let row"> {{row.Forecast_Period_To}} </mat-cell>
+      </ng-container>
+      <ng-container matColumnDef="Forecasted_On">
+        <mat-header-cell *matHeaderCellDef mat-sort-header> Forecasted_On </mat-header-cell>
+        <mat-cell *matCellDef="let row"> {{row.Forecasted_On}} </mat-cell>
+      </ng-container>
+      <ng-container matColumnDef="Last_Updated_User">
+        <mat-header-cell *matHeaderCellDef mat-sort-header> Last_Updated_User </mat-header-cell>
+        <mat-cell *matCellDef="let row"> {{row.Last_Updated_User}} </mat-cell>
+      </ng-container>
+      <ng-container matColumnDef="Last_Updated_Time">
+        <mat-header-cell *matHeaderCellDef mat-sort-header> Last_Updated_Time </mat-header-cell>
+        <mat-cell *matCellDef="let row"> {{row.Last_Updated_Time}} </mat-cell>
+      </ng-container>
+      <ng-container matColumnDef="Rate">
+        <mat-header-cell *matHeaderCellDef mat-sort-header> Rate </mat-header-cell>
+        <mat-cell *matCellDef="let row"> {{row.Rate}} </mat-cell>
+      </ng-container>
+      <ng-container matColumnDef="Portfolio">
+        <mat-header-cell *matHeaderCellDef mat-sort-header> Portfolio </mat-header-cell>
+        <mat-cell *matCellDef="let row"> {{row.Portfolio}} </mat-cell>
+      </ng-container>
+     <ng-container matColumnDef="POC">
+    <mat-header-cell *matHeaderCellDef mat-sort-header> POC </mat-header-cell>
+    <mat-cell *matCellDef="let row"> {{row.POC}} </mat-cell>
+  </ng-container>
+  <ng-container matColumnDef="Hours">
+    <mat-header-cell *matHeaderCellDef mat-sort-header> Hours </mat-header-cell>
+    <mat-cell *matCellDef="let row"> {{row.Hours}} </mat-cell>
+  </ng-container>
+      <ng-container matColumnDef="Revenue">
+        <mat-header-cell *matHeaderCellDef mat-sort-header> Revenue </mat-header-cell>
+        <mat-cell *matCellDef="let row"> {{row.Revenue}} </mat-cell>
+      </ng-container>
+      <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+      <mat-row *matRowDef="let row; columns: displayedColumns;">
+      </mat-row>
+    </mat-table>
+  
+    <mat-paginator [pageSizeOptions]="[5, 10, 25, 100]"></mat-paginator>
+  </div>
+  

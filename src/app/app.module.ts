@@ -13,11 +13,13 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import { ReportService} from "./report.service";
 
 import { AppComponent } from './app.component';
+import { ReportEntityComponent } from './Report/ReportEntity.component';
+import { ReportEntityService } from './Report/ReportEntity.service';
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,ReportEntityComponent
   ],
   imports: [
     BrowserModule,
@@ -28,7 +30,7 @@ import { AppComponent } from './app.component';
     MatButtonModule, MatCheckboxModule,MatTableModule,MatPaginatorModule,MatSortModule,
     MatFormFieldModule,MatInputModule
   ],
-  providers: [ReportService],
-  bootstrap: [AppComponent]
+  providers: [ReportService,ReportEntityService],
+  bootstrap: [ReportEntityComponent]
 })
 export class AppModule { }
