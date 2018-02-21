@@ -79,15 +79,6 @@
         <mat-form-field class="update-full-width">
             <input matInput [ngModel]="report.revenue" [ngModelOptions]="{standalone: true}" placeholder="revenue" >
         </mat-form-field>
-        
-        
-
-        
-
-
-
-
-
 
     </form>
 
@@ -99,7 +90,7 @@
         <div class="mat-button-focus-overlay"></div>
     </button>
     <button cdkfocusinitial="" mat-button="" type="button" class="mat-button" aria-label="Close dialog">
-        <span class="mat-button-wrapper">Save</span>
+        <span class="mat-button-wrapper"  (click)="update()" >Save</span>
         <div class="mat-button-ripple mat-ripple" matripple=""></div>
         <div class="mat-button-focus-overlay"></div>
     </button>

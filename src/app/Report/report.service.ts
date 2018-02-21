@@ -27,4 +27,21 @@ export class ReportService{
 			return Observable.throw(errMsg);
 		});
 	}
+
+	updateReport(report:Report):Observable<Report>{
+
+		console.log(report);
+		
+		return this._http
+		.post( Constants.base_url+'reports/reports/saveRecord', report ).map(this.extractData);
+	}
+
+	extractData(res: Response) {
+		console.log(res);
+		
+		let body = res.json();
+		return body || {};
+	  }
+
+	
 }

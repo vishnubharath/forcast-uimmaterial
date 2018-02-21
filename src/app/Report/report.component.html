@@ -4,17 +4,17 @@
     </mat-form-field>
   </div>
   
-  <div class="example-container mat-elevation-z8" style="overflow: visible;">
+  <div >
   
     <mat-table [dataSource]="dataSource"  matSort>
   
       <ng-container matColumnDef="edit">
-        <mat-header-cell *matHeaderCellDef> Edit  </mat-header-cell>
+        <mat-header-cell *matHeaderCellDef > Edit  </mat-header-cell>
         <mat-cell *matCellDef="let row"> <mat-icon (click)="editReport(row)" >edit</mat-icon> </mat-cell>
       </ng-container>
       <ng-container matColumnDef="employeeId">
-        <mat-header-cell *matHeaderCellDef mat-sort-header > employeeId </mat-header-cell>
-        <mat-cell *matCellDef="let row" > {{row.employeeId}} </mat-cell>
+        <mat-header-cell *matHeaderCellDef mat-sort-header > Report ID </mat-header-cell>
+        <mat-cell *matCellDef="let row" > {{row.reportId}} </mat-cell>
       </ng-container>
       <ng-container matColumnDef="projectId">
         <mat-header-cell *matHeaderCellDef mat-sort-header> projectId </mat-header-cell>

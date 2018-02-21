@@ -1,0 +1,8 @@
+.mat-table {
+  overflow: auto;
+}
+
+
+.mat-header-row, .mat-row {
+  min-width: 3500px;
+} 

@@ -8,7 +8,8 @@ import {UpdateReportDialog} from './../Dialog/update-report-dialog.component';
 
 @Component({
   selector: 'report-root',
-  templateUrl: './report.component.html'
+  templateUrl: './report.component.html',
+  styleUrls: ['report.css'],
  })
 
 
